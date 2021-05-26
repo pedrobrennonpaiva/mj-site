@@ -1,0 +1,20 @@
+
+@import './app.css';
+
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    text-align: center;
+    padding: 8px;
+}
+
+.h_footer {
+    color: var(--color-secondary);
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.span_footer {
+    margin-top: 10px;
+    font-size: 12px;
+}

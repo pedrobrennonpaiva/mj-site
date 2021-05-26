@@ -1,0 +1,101 @@
+
+@import './app.css';
+
+
+.img_carousel {
+    max-height: 500px;
+}
+
+.carousel_item {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.div_carousel_item:after {
+    content: '';
+    position: absolute;
+    border: 56px solid transparent;
+    border-bottom: 112px solid var(--color-secondary);
+    bottom: 0px;
+    left: -56px;
+    z-index: -1;
+}
+
+.div_carousel_item {
+    position: relative;
+    right: 0px;
+    top: 10px;
+    background: var(--color-secondary);
+    padding: 20px 40px;
+    z-index: 10;
+}
+
+.h_carousel_item {
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.font_btn_carousel {
+    color: var(--color-tertiary);
+    font-size: 20px;
+}
+
+/**/
+
+.bg_white {
+    background-color: var(--color-white);
+}
+
+.bg_snow {
+    background-color: var(--color-secondary);
+}
+
+.section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 24px !important;
+}
+
+.h_default {
+    border-bottom: 5px solid var(--color-tertiary);
+    display: inline-block;
+}
+
+.sub_menu {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.ul_person {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.btn_form {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+    border-radius: 10px !important;
+}
+
+.btn_form:hover {
+    background-color: var(--color-tertiary) !important;
+    color: var(--color-primary) !important;
+}
+
+.link_form {
+    color: var(--color-primary) !important;
+    display: block;
+}
+
+.link_form:hover {
+    color: var(--color-tertiary) !important;
+    text-decoration: none;
+}
+

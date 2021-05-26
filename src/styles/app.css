@@ -1,0 +1,152 @@
+
+@font-face {
+    font-family: 'BloggerSansRegular';
+    src: url('../fonts/Blogger_Sans.otf'); /* IE9 Compat Modes */
+    src: url('../fonts/Blogger_Sans.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Blogger_Sans.otf') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/Blogger_Sans.otf') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/Blogger_Sans.otf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/Blogger_Sans.otf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'BloggerSansMedium';
+    src: url('../fonts/Blogger_Sans-Medium.otf'); /* IE9 Compat Modes */
+    src: url('../fonts/Blogger_Sans-Medium.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Blogger_Sans-Medium.otf') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/Blogger_Sans-Medium.otf') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/Blogger_Sans-Medium.otf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/Blogger_Sans-Medium.otf') format('svg'); /* Legacy iOS */
+}
+
+:root {
+    --color-primary: #033d6f;
+    --color-secondary: #f5f6fb;
+    --color-tertiary: #d3df61;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-gray-dark: #364d61;
+    --color-gray-medium: #737a8d;
+    --color-gray: #e6e6e6;
+
+    font-family: 'BloggerSansRegular', sans-serif !important;
+    font-size: 20px !important;
+    color: var(--color-primary) !important;
+}
+
+body {
+    font-family: 'BloggerSansRegular', sans-serif !important;
+    font-size: 20px !important;
+    color: var(--color-primary) !important;
+}
+
+.row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-indicators li.active {
+    background-color: var(--color-primary) !important;
+}
+.carousel-indicators li {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 100%;
+}
+
+.carousel-indicators {
+    margin-bottom: 0rem !important;
+}
+
+.alert-message {
+    position: fixed !important;
+    top: 80px;
+    right: 10px;
+    z-index: 999;
+    border: none !important;
+    color: white !important;
+}
+
+.btn_default {
+    background-color: var(--color-gray-dark) !important;
+    color: var(--color-secondary) !important;
+    border-radius: 10px !important;
+    border: none !important;
+}
+
+.btn_default:hover {
+    background-color: var(--color-primary) !important;
+    color: var(--color-secondary) !important;
+}
+
+.btn_secondary {
+    background-color: var(--color-gray) !important;
+    color: var(--color-primary) !important;
+    border-radius: 10px !important;
+    border: none !important;
+}
+
+.btn_secondary:hover {
+    background-color: var(--color-primary) !important;
+    color: var(--color-secondary) !important;
+}
+
+.btn_tertiary {
+    background-color: var(--color-white) !important;
+    color: var(--color-primary) !important;
+    border-radius: 10px !important;
+    border: 1px solid var(--color-gray) !important;
+}
+
+.btn_tertiary:hover {
+    background-color: var(--color-primary) !important;
+    color: var(--color-secondary) !important;
+}
+
+.a_link {
+    background: none !important;
+    border: none !important;
+    color: var(--color-primary);
+}
+
+.a_link:hover {
+    color: var(--color-gray-dark);
+    text-decoration: underline;
+}
+
+.h {
+    font-family: 'BloggerSansMedium', sans-serif !important;
+}
+
+.alert-success {
+    background-color: #46a049 !important;
+}
+
+.alert-danger {
+    background-color: #EF4051 !important;
+}
+
+.close {
+    color: white !important;
+    opacity: 1 !important;
+    padding: 0.6rem 1.25rem !important;
+}
+
+.nav_link {
+    color: var(--color-primary) !important;
+}
+
+.nav-link.active {
+    background-color: var(--color-gray-dark) !important;
+    color: var(--color-secondary) !important;
+    border-radius: 10px !important;
+}
+
+.nav-link.active:hover {
+    background-color: var(--color-primary) !important;
+    color: var(--color-secondary) !important;
+}
