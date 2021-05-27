@@ -12,8 +12,8 @@ const Header = () => {
         <div>
             <div className={`${styles.div_top_header}`}>
                 <span>Fale conosco: </span>
-                <a href='https://api.whatsapp.com/send?phone=5521976355821' target='_blank'> (21) 97635-5821 </a> / 
                 <a href='https://api.whatsapp.com/send?phone=5521973014646' target='_blank'> (21) 97301-4646 </a> / 
+                <a href='https://api.whatsapp.com/send?phone=5521976355821' target='_blank'> (21) 97635-5821 </a> / 
                 <a href='https://api.whatsapp.com/send?phone=5521994386872' target='_blank'> (21) 99438-6872 </a> (Whatsapp) / 
                 <a href='mailto:mjdespachante@gmail.com' target='_blank'> mjdespachante@gmail.com </a>
             </div>
@@ -35,6 +35,8 @@ const Header = () => {
                         <Nav.Link as={LinkB} className={`${styles.nav_link}`} activeClass="active" to="services" spy={true} smooth={true} duration={1000}>Serviços</Nav.Link>
                         <Nav.Link as={LinkB} className={`${styles.nav_link}`} activeClass="active" to="others" spy={true} smooth={true} duration={1000}>Outros serviços</Nav.Link>
                         <Nav.Link as={LinkB} className={`${styles.nav_link}`} activeClass="active" to="contact" spy={true} smooth={true} duration={1000}>Contato</Nav.Link>
+                        <Nav.Link as={LinkB} className={`${styles.nav_link}`} activeClass="active" to="depoiment" spy={true} smooth={true} duration={1000}>Depoimentos</Nav.Link>
+                        <Nav.Link as={LinkB} className={`${styles.nav_link}`} activeClass="active" to="partner" spy={true} smooth={true} duration={1000}>Parcerias</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

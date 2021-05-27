@@ -28,6 +28,7 @@
     --color-gray-dark: #364d61;
     --color-gray-medium: #737a8d;
     --color-gray: #e6e6e6;
+    --font-default: 'BloggerSansRegular', sans-serif !important;
 
     font-family: 'BloggerSansRegular', sans-serif !important;
     font-size: 20px !important;
@@ -45,6 +46,10 @@ body {
     margin-left: 0px !important;
 }
 
+.navbar-toggler {
+    font-size: 1rem !important;
+}
+
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
@@ -56,10 +61,12 @@ body {
     width: 12px !important;
     height: 12px !important;
     border-radius: 100%;
+    background-color: var(--color-tertiary) !important;
 }
 
 .carousel-indicators {
     margin-bottom: 0rem !important;
+    bottom: -8px !important;
 }
 
 .alert-message {

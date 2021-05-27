@@ -1,6 +1,8 @@
 
 export class CarouselModel {
 
-    img: string = '';
-    description: string = '';
+    img?: string = '';
+    title?: string = '';
+    description?: string = '';
+    stars?: number = 0;
 }

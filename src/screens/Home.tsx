@@ -2,20 +2,22 @@ import React, { useEffect, useState } from 'react';
 import { Carousel, Form, Spinner } from 'react-bootstrap';
 import emailjs from 'emailjs-com';
 import { Link as LinkB } from 'react-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Props from '../configs/Props';
 import Alert from '../components/Alert';
 import { Utils } from '../configs/Utils';
 import { Validations } from '../configs/Validations';
 import { CarouselModel } from '../models/CarouselModel';
 import img1 from '../images/img-1.png';
-import img2 from '../images/img-1.png';
-import img3 from '../images/img-1.png';
+import img2 from '../images/img-2.png';
+import img3 from '../images/img-3.png';
 import partner1 from '../images/parceiro-1.png';
 import partner2 from '../images/parceiro-2.png';
 import partner3 from '../images/parceiro-3.png';
 import partner4 from '../images/parceiro-4.png';
 import partner5 from '../images/parceiro-5.png';
 import styles from '../styles/home.module.css';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const Home = (props: Props) => {
 
@@ -32,6 +34,7 @@ const Home = (props: Props) => {
     const [btnTxtForm, setBtnTxtForm] = useState<string | object>();
 
     const [carousel, setCarousel] = useState<CarouselModel[]>();
+    const [carouselDepoiments, setCarouselDepoiments] = useState<CarouselModel[]>();
 
     useEffect(() => {
 
@@ -50,6 +53,49 @@ const Home = (props: Props) => {
             img: img3,
             description: 'Conteste suas multas!'
           }
+        ]);
+    
+        setCarouselDepoiments([
+          {
+            title: 'MJ Soluções',
+            description: 'Profissional incrível, ele e sua equipe vem prestando um serviço diferenciado com um atendimento personalizado que nos atende da melhor forma possível, preço muito bom, nossa empresa só tem agradecer ao Berriel, recomento muito!!!!',
+            stars: 5,
+          },
+          {
+            title: 'Bruno Silva',
+            description: 'Resolveu a documentação do meu carro em tempo recorde. Obrigado equipe. Recomendo!',
+            stars: 5,
+          },
+          {
+            title: 'Lincoln Mendes',
+            description: 'Equipe qualificada e preço justo. João é uma pessoa extremamente prestativa e competente. Recomendo.',
+            stars: 5,
+          },
+          {
+            title: 'Roberto Matias',
+            description: 'Na MJ despachantes você tem a certeza de qualidade e excelência no atendimento, com profissional qualificado e o melhor,  pessoas educadas e super atenciosas! Recomendo muito!!!!',
+            stars: 5,
+          },
+          {
+            title: 'Monique Simeão',
+            description: 'Sou muito suspeita em falar do trabalho  que João  faz, comprometimento fora do normal, focado sempre na melhoria contínua dos processos, buscando descomplicar o processo complicado, assume o problema do cliente para ele, excelente  profissional  de verdade.',
+            stars: 5,
+          },
+          {
+            title: 'Nathan Lacerda',
+            description: 'Super recomendo! Agradeço imensamente a atenção e suporte full time do João! Profissional totalmente qualificado para todos os casos.',
+            stars: 5,
+          },
+          {
+            title: 'Luis Carlos Marques Berriel',
+            description: 'Foi uma experiência muito positiva, nunca tinha utilizado este tipo de serviço,  eles foram muito ágeis e profissionais. Parabéns pela excelente prestação de serviços eu super recomendo.',
+            stars: 5,
+          },
+          {
+            title: 'Carla Morais',
+            description: 'Empresa muito eficiente, qualidade no serviço prestado, profissionalismo e pessoas maravilhosas, resolveram tudo em relação a vistoria do meu carro , troca de propriedade .Agradeço pelo excelente atendimento e serviço prestado, que Deus os abençoe!!!',
+            stars: 5,
+          },
         ]);
     }, []);
 
@@ -97,6 +143,8 @@ const Home = (props: Props) => {
         <div>
             <Alert state={props.location.state} />
 
+            
+
             <Carousel controls={false} interval={5000}>
                 {carousel ? carousel.map((item, key) => (
 
@@ -118,6 +166,7 @@ const Home = (props: Props) => {
             </Carousel>
 
             <div className={`text-center`}>
+
                 <div className={`${styles.section} ${styles.bg_white}`} id='mission'>
                     <h2 className={`h ${styles.h_default}`}>Nossa missão</h2>
 
@@ -350,7 +399,7 @@ const Home = (props: Props) => {
                                         <Form.Control 
                                             type="text" 
                                             placeholder="Digite seu telefone" 
-                                            value={nameForm}
+                                            value={numberPhoneForm}
                                             onChange={(e) => setNumberPhoneForm(e.target.value)}
                                             name='numberPhone'
                                         />
@@ -396,11 +445,11 @@ const Home = (props: Props) => {
 
                                 <h6 className={`h`}>Whatsapp</h6>
 
-                                <a href='https://api.whatsapp.com/send?phone=5521976355821' target='_blank' className={`${styles.link_form}`}>
-                                    (21) 97635-5821
-                                </a>
                                 <a href='https://api.whatsapp.com/send?phone=5521973014646' target='_blank' className={`${styles.link_form}`}>
                                     (21) 97301-4646
+                                </a>
+                                <a href='https://api.whatsapp.com/send?phone=5521976355821' target='_blank' className={`${styles.link_form}`}>
+                                    (21) 97635-5821
                                 </a>
                                 <a href='https://api.whatsapp.com/send?phone=5521994386872' target='_blank' className={`${styles.link_form}`}>
                                     (21) 99438-6872
@@ -416,46 +465,78 @@ const Home = (props: Props) => {
                     </div>
                 </div>
 
-                <div className={`${styles.section} ${styles.bg_white}`} id='contact'>
+                <div className={`${styles.section} ${styles.bg_snow}`} id='depoiment'>
+                    <h2 className={`h ${styles.h_default}`}>Depoimentos</h2>
+
+                    <div className={`${styles.sub_menu}`}>
+                        <h4 className={`h ${styles.h_sub_menu}`}>O que as pessoas dizem dos nossos serviços:</h4>
+                        
+                        <Carousel controls={false} interval={10000}>
+                            {carouselDepoiments ? carouselDepoiments.map((item, key) => 
+                                <Carousel.Item key={key}>
+                                    <div className={`row ${styles.carousel_depoiments_item}`}>
+                                        <div className={`${styles.div_carousel_depoiments_item}`}>
+                                            <p className={`${styles.p_carousel_depoiments_item}`}>
+                                                {item.description}
+                                            </p>
+                                            <h6 className={`h ${styles.h_carousel_depoiments_item}`}>
+                                                {item.title}
+                                            </h6>
+
+                                            <div>
+                                                {[...Array(item.stars)].map((_, k) => (
+                                                    <FontAwesomeIcon icon={faStar} className={`${styles.star_carousel_depoiments_item}`} key={k} />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Carousel.Item>
+                            )
+                            : <Spinner animation="grow" variant="dark" size="sm" />}
+                        </Carousel>
+                    </div>
+                </div>
+
+                <div className={`${styles.section} ${styles.bg_white}`} id='partner'>
                     <h2 className={`h ${styles.h_default}`}>Parcerias</h2>
 
                     <div className={`${styles.sub_menu}`}>
                         <h4 className={`h ${styles.h_sub_menu}`}>Conheça nossos parceiros:</h4>
 
-                        <div className={`row mt-2`}>
-                            <div className={`col-md-4`}>
+                        <div className={`row align-items-center mt-md-2`}>
+                            <div className={`col-md-4 ${styles.div_img_partner} mt-2 mt-md-0`}>
                                 <img 
-                                    className={`img-fluid`} 
+                                    className={`${styles.img_partner} img-fluid`} 
                                     src={partner1}
                                     alt='Parceiros'
                                 />
                             </div>
-                            <div className={`col-md-4`}>
+                            <div className={`col-md-4 ${styles.div_img_partner} mt-2 mt-md-0`}>
                                 <img 
-                                    className={`img-fluid`} 
+                                    className={`${styles.img_partner} img-fluid`} 
                                     src={partner2}
                                     alt='Parceiros'
                                 />
                             </div>
-                            <div className={`col-md-4`}>
+                            <div className={`col-md-4 ${styles.div_img_partner} mt-2 mt-md-0`}>
                                 <img 
-                                    className={`img-fluid`} 
+                                    className={`${styles.img_partner} img-fluid`} 
                                     src={partner3}
                                     alt='Parceiros'
                                 />
                             </div>
                         </div>
-                        <div className={`row mt-2`}>
-                            <div className={`col-md-6`}>
+                        <div className={`row align-items-center mt-md-2`}>
+                            <div className={`col-md-6 ${styles.div_img_partner} mt-2 mt-md-0`}>
                                 <img 
-                                    className={`img-fluid`} 
+                                    className={`${styles.img_partner} img-fluid`} 
                                     src={partner4}
                                     alt='Parceiros'
                                 />
                             </div>
-                            <div className={`col-md-6`}>
+                            <div className={`col-md-6 ${styles.div_img_partner} mt-2 mt-md-0`}>
                                 <img 
-                                    className={`img-fluid`} 
+                                    className={`${styles.img_partner} img-fluid`} 
                                     src={partner5}
                                     alt='Parceiros'
                                 />
