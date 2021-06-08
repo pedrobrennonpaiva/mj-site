@@ -15,7 +15,7 @@ const Header = () => {
                 <a href='https://api.whatsapp.com/send?phone=5521973014646' target='_blank'> (21) 97301-4646 </a> / 
                 <a href='https://api.whatsapp.com/send?phone=5521976355821' target='_blank'> (21) 97635-5821 </a> / 
                 <a href='https://api.whatsapp.com/send?phone=5521994386872' target='_blank'> (21) 99438-6872 </a> (Whatsapp) / 
-                <a href='mailto:mjdespachante@gmail.com' target='_blank'> mjdespachante@gmail.com </a>
+                <a href='mailto:mjdespachante35@gmail.com' target='_blank'> mjdespachante35@gmail.com </a>
             </div>
             <Navbar className={`${styles.navbar}`} expand='md' collapseOnSelect>
                 <Navbar.Brand as={Link} to='/'>

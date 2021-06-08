@@ -457,8 +457,8 @@ const Home = (props: Props) => {
 
                                 <h6 className={`h mt-4`}>E-mail</h6>
 
-                                <a href='mailto:mjdespachante@gmail.com' target='_blank' className={`${styles.link_form}`}>
-                                    mjdespachante@gmail.com
+                                <a href='mailto:mjdespachante35@gmail.com' target='_blank' className={`${styles.link_form}`}>
+                                    mjdespachante35@gmail.com
                                 </a>                   
                             </div>
                         </div>
